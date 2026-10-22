@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.tmp/
+.pkgdeps/
+.pip-cache/
+build*/
+dist*/
+tts_models/
+state/
+.env
+.env.*
+!.env.example
+*.log

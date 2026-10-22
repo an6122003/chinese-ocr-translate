@@ -1,0 +1,21 @@
+# Core
+pynput
+pystray
+Pillow
+
+# Pinyin
+pypinyin
+
+# Dictionary
+deep_translator
+jieba
+pyperclip
+
+# OCR
+winocr
+mss
+
+# TTS
+sherpa-onnx
+pyttsx3
+pywin32
