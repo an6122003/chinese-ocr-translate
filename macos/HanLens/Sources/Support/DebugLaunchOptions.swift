@@ -56,6 +56,7 @@ enum DebugLaunchOptions {
     private static func renderPanel(text: String, to output: String, dark: Bool, selectWord: Int?) async {
         let app = AppController.shared
         let model = LookupModel(source: .screen, services: app.services, status: .recognizing)
+        model.speaksAutomatically = false
         await model.setText(text)
         // Give the translation a moment to arrive.
         for _ in 0..<50 where model.translation == .loading {

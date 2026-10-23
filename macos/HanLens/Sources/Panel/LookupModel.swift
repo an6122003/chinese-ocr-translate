@@ -79,6 +79,9 @@ final class LookupModel: Identifiable {
     @ObservationIgnored private var exampleTask: Task<Void, Never>?
     @ObservationIgnored var onTextChange: ((LookupModel) -> Void)?
 
+    /// Off for screenshots, which shouldn't read aloud even when the user's setting says so.
+    var speaksAutomatically = true
+
     init(source: Source, services: LookupServices, status: Status = .ready) {
         self.source = source
         self.services = services
@@ -163,7 +166,7 @@ final class LookupModel: Identifiable {
         status = .ready
         onTextChange?(self)
         translate()
-        if settings.autoSpeak, analysis.containsChinese { Speaker.shared.speak(text) }
+        if speaksAutomatically, settings.autoSpeak, analysis.containsChinese { Speaker.shared.speak(text) }
     }
 
     func translate(using engine: TranslationEngine? = nil) {
