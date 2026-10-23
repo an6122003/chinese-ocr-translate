@@ -2,6 +2,11 @@
 
 A lightweight Windows background utility for typing Pinyin with tone marks, translating Chinese text, and performing OCR on non-selectable Chinese characters.
 
+> **🍎 On a Mac?** See [`macos/`](macos/README.md) — **HanLens**, a native macOS version with circle-to-search
+> selection, offline Vietnamese dictionary, Hán Việt readings, example sentences, subtitle "Follow" mode and more.
+> [Download the latest DMG](https://github.com/an6122003/chinese-ocr-translate/releases/latest), or build it with
+> `cd macos && make install`. Ideas for an iPad version: [`docs/ipados-circle-to-search.md`](docs/ipados-circle-to-search.md).
+
 ## ✨ Features
 
 ### 📝 Pinyin Input

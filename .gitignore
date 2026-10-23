@@ -13,3 +13,14 @@ state/
 .env.*
 !.env.example
 *.log
+
+# macOS app (HanLens)
+macos/build/
+macos/HanLens.xcodeproj/
+macos/HanLens/Resources/Info.plist
+macos/Data/cache/
+macos/Data/hanzi.sqlite
+macos/Data/*.sqlite.tmp
+macos/HanziKit/.build/
+macos/HanziKit/.swiftpm/
+.DS_Store

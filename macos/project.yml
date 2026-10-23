@@ -1,0 +1,83 @@
+# XcodeGen spec — run `make project` (or `xcodegen generate`) to create HanLens.xcodeproj.
+name: HanLens
+options:
+  bundleIdPrefix: com.nguyenan
+  deploymentTarget:
+    macOS: "26.0"
+  developmentLanguage: en
+  createIntermediateGroups: true
+  groupSortPosition: top
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: QUV7VD99GR
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "Apple Development"
+    ENABLE_HARDENED_RUNTIME: YES
+    DEAD_CODE_STRIPPING: YES
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+
+packages:
+  HanziKit:
+    path: HanziKit
+
+targets:
+  HanLens:
+    type: application
+    platform: macOS
+    sources:
+      - path: HanLens/Sources
+      - path: HanLens/Resources/Assets.xcassets
+      - path: HanLens/Resources/AppIcon.icon
+      - path: Data/hanzi.sqlite
+        buildPhase: resources
+      - path: Data/LICENSES.md
+        buildPhase: resources
+      - path: Data/vendor/licenses
+        type: folder
+        buildPhase: resources
+    dependencies:
+      - package: HanziKit
+    info:
+      path: HanLens/Resources/Info.plist
+      properties:
+        CFBundleName: HanLens
+        CFBundleDisplayName: HanLens
+        CFBundleShortVersionString: $(MARKETING_VERSION)
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
+        LSUIElement: true
+        LSApplicationCategoryType: public.app-category.education
+        NSHumanReadableCopyright: "HanLens — Chinese OCR, pinyin, Hán Việt & Vietnamese translation"
+        CFBundleURLTypes:
+          - CFBundleURLName: com.nguyenan.HanLens
+            CFBundleURLSchemes: [hanlens]
+        NSServices:
+          - NSMenuItem:
+              default: Look Up in HanLens
+            NSMessage: lookUpText
+            NSPortName: HanLens
+            NSSendTypes: [NSStringPboardType, public.utf8-plain-text]
+            NSRequiredContext: {}
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nguyenan.HanLens
+        PRODUCT_NAME: HanLens
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+        SWIFT_APPROACHABLE_CONCURRENCY: YES
+        SWIFT_STRICT_CONCURRENCY: complete
+        COMBINE_HIDPI_IMAGES: YES
+        GENERATE_INFOPLIST_FILE: NO
+
+schemes:
+  HanLens:
+    build:
+      targets:
+        HanLens: all
+    run:
+      config: Debug
+    archive:
+      config: Release

@@ -1,0 +1,47 @@
+{
+  "comment": "Pinned dictionary sources. fetch_sources.py downloads them into Data/cache and verifies sha256.",
+  "sources": [
+    {
+      "name": "CC-CEDICT (via the Zhongwen extension, audited 2026-10-23)",
+      "file": "cedict_ts.u8",
+      "url": "https://raw.githubusercontent.com/cschiller/zhongwen/5b92f3ead51fb8c25dbe6aaaaf0bbc3a6936a664/data/cedict_ts.u8",
+      "license": "CC BY-SA 4.0",
+      "sha256": "52b229a3e5fed08ebec7b5949f6838cb84441b5f35d730dcb00b304dee9c0317"
+    },
+    {
+      "name": "Chinese Grammar Wiki keywords (Zhongwen)",
+      "file": "grammarKeywordsMin.json",
+      "url": "https://raw.githubusercontent.com/cschiller/zhongwen/5b92f3ead51fb8c25dbe6aaaaf0bbc3a6936a664/data/grammarKeywordsMin.json",
+      "license": "GPL-2.0 (Zhongwen repository)",
+      "sha256": "2eb2067fe344ebf5a3ac071f3d6e7de65e0bb270ce3536a5b259109bf3624804"
+    },
+    {
+      "name": "Unicode Han Database 18.0.0",
+      "file": "Unihan-18.0.0.zip",
+      "url": "https://www.unicode.org/Public/18.0.0/ucd/Unihan.zip",
+      "license": "Unicode License v3",
+      "sha256": "4c93ea9c1f636451729a840978f1667a53886af37ba854fdcce109721c63d43e"
+    },
+    {
+      "name": "HSK 3.0 word list (ivankra/hsk30)",
+      "file": "hsk30.csv",
+      "url": "https://raw.githubusercontent.com/ivankra/hsk30/4ff9e3915ce87baaecd7ebe263085573a4ea3192/hsk30.csv",
+      "license": "MIT",
+      "sha256": "8c2b73f74776240bcf154624730fc6fb2c42c254d5c5d0f88943878b8e575b9b"
+    },
+    {
+      "name": "jieba word frequencies",
+      "file": "jieba-dict.txt",
+      "url": "https://raw.githubusercontent.com/fxsjy/jieba/67fa2e36e72f69d9134b8a1037b83fbb070b9775/jieba/dict.txt",
+      "license": "MIT",
+      "sha256": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8"
+    },
+    {
+      "name": "Thiều Chửu, Hán Việt tự điển (1942), digitized by catusf/tudien — used to validate Hán Việt readings",
+      "file": "TudienThienChuu.tab",
+      "url": "https://raw.githubusercontent.com/catusf/tudien/a7dd918ecc67de8c2d15034f885d919b9295eba4/dict/TudienThienChuu.tab",
+      "license": "Public domain (1942); digitization CC0-1.0",
+      "sha256": "6266861966039b984126d0fb2852c918727b7e4930888c7ed2a31e66e0f68f28"
+    }
+  ]
+}
