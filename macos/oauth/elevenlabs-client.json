@@ -1,0 +1,17 @@
+{
+  "client_id": "https://cdn.jsdelivr.net/gh/an6122003/chinese-ocr-translate@main/macos/oauth/elevenlabs-client.json",
+  "client_name": "HanLens",
+  "client_uri": "https://github.com/an6122003/chinese-ocr-translate",
+  "redirect_uris": [
+    "http://localhost:43617/callback",
+    "http://localhost:43618/callback",
+    "http://localhost:43619/callback",
+    "http://127.0.0.1:43617/callback",
+    "http://127.0.0.1:43618/callback",
+    "http://127.0.0.1:43619/callback"
+  ],
+  "grant_types": ["authorization_code", "refresh_token"],
+  "response_types": ["code"],
+  "token_endpoint_auth_method": "none",
+  "scope": "text_to_speech voices_read add_voice_from_voice_library user_read"
+}
